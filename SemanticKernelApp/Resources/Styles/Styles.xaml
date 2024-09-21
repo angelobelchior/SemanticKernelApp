@@ -12,10 +12,16 @@
     <Style x:Key="UserMessageStyle" BasedOn="{StaticResource MessageStyleBase}"  TargetType="Border">
         <Setter Property="BackgroundColor" Value="LightGreen" />
         <Setter Property="HorizontalOptions" Value="End" />
+        <Setter Property="StrokeShape">
+            <RoundRectangle CornerRadius="15, 15, 15, 0" />
+        </Setter>
     </Style>
     <Style x:Key="SystemMessageStyle" BasedOn="{StaticResource MessageStyleBase}"  TargetType="Border">
-        <Setter Property="BackgroundColor" Value="LightGray" />
+        <Setter Property="BackgroundColor" Value="#CFCFCF" />
         <Setter Property="HorizontalOptions" Value="Start" />
+        <Setter Property="StrokeShape">
+            <RoundRectangle CornerRadius="15, 15, 0, 15" />
+        </Setter>
     </Style>
 
     <Style x:Key="TextMessageStyle" TargetType="Label">

@@ -6,6 +6,7 @@
              xmlns:viewModels="clr-namespace:SemanticKernelApp.ViewModels"
              x:Class="SemanticKernelApp.MainPage"
              x:DataType="viewModels:MainPageViewModel"
+             xmlns:idk="clr-namespace:Indiko.Maui.Controls.Markdown;assembly=Indiko.Maui.Controls.Markdown"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              xmlns:converters="clr-namespace:SemanticKernelApp.Converters"
              IsBusy="{Binding SendMessageCommand.IsRunning}"
@@ -23,7 +24,7 @@
           RowDefinitions="*,Auto"
           ColumnSpacing="8">
 
-        <ListView x:Name="listView"
+        <ListView x:Name="Messages"
                   Grid.Column="0"
                   Grid.Row="0"
                   Grid.ColumnSpan="2"
@@ -49,11 +50,6 @@
 
                             <Border Grid.Column="1"
                                     Style="{Binding Sender, Converter={StaticResource SenderToStyleConverter}}">
-
-                                <Border.StrokeShape>
-                                    <RoundRectangle CornerRadius="15" />
-                                </Border.StrokeShape>
-
                                 <Grid RowDefinitions="Auto,10" RowSpacing="10">
                                     <Label Grid.Row="0"
                                            Style="{StaticResource TextMessageStyle}"
@@ -72,7 +68,8 @@
 
         </ListView>
 
-        <Entry Grid.Column="0"
+        <Entry x:Name="Message"
+               Grid.Column="0"
                Grid.Row="1"
                VerticalOptions="End"
                Placeholder="Enter text"
