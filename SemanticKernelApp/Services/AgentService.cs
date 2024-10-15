@@ -62,7 +62,7 @@ public class UserInfoKernel
 {
     [KernelFunction]
     [Description("Obtém as vendas do dia feitas pelo usuário")]
-    public string GetSalesOfTheDay(int id)
+    public string GetSalesOfTheDay(int id, string role)
     {
         var sales = 
 $"""
