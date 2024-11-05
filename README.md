@@ -1,0 +1,3 @@
+# Semantic Kernal App
+
+Demo usada na talk sobre Semantic Kernel...
