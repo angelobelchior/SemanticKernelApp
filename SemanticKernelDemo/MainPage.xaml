@@ -47,7 +47,7 @@
 
                             <toolkit:AvatarView Text="{Binding User}"
                                                 VerticalOptions="End"
-                                                 BorderColor="#CFCFCF"
+                                                BorderColor="#CFCFCF"
                                                 IsVisible="{Binding Sender, Converter={StaticResource SenderToAvatarIsVisibleConverter}}" />
 
                             <Border Grid.Column="1"

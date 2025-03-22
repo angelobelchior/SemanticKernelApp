@@ -26,23 +26,29 @@
     </Style>
 
     <Style x:Key="TextMessageStyle" TargetType="idk:MarkdownView">
-        <Setter Property="H1FontSize" Value="20" />
+        <!-- <Setter Property="H1FontSize" Value="20" /> -->
+        <Setter Property="H1FontSize" Value="22" />
         <Setter Property="H1Color" Value="{StaticResource Blue100Accent}" />
-        <Setter Property="H2FontSize" Value="18" />
+        <!-- <Setter Property="H2FontSize" Value="18" /> -->
+        <Setter Property="H2FontSize" Value="20" />
         <Setter Property="H2Color" Value="{StaticResource Blue200Accent}" />
-        <Setter Property="H3FontSize" Value="16" />
+        <!-- <Setter Property="H3FontSize" Value="16" /> -->
+        <Setter Property="H3FontSize" Value="18" />
         <Setter Property="H3Color" Value="{StaticResource Blue300Accent}" />
         <Setter Property="CodeBlockBackgroundColor" Value="{StaticResource GrayQuote}" />
         <Setter Property="CodeBlockTextColor" Value="{StaticResource Gray600}" />
         <Setter Property="CodeBlockBorderColor" Value="{StaticResource GrayQuoteBorder}" />
         <Setter Property="CodeBlockFontFace" Value="CamingoCodeRegular" />
-        <Setter Property="CodeBlockFontSize" Value="12" />
+        <!-- <Setter Property="CodeBlockFontSize" Value="12" /> -->
+        <Setter Property="CodeBlockFontSize" Value="14" />
+
         <Setter Property="BlockQuoteBackgroundColor" Value="{StaticResource Yellow300Accent}" />
         <Setter Property="BlockQuoteTextColor" Value="{StaticResource Gray600}" />
         <Setter Property="BlockQuoteBorderColor" Value="{StaticResource Yellow100Accent}" />
         <Setter Property="BlockQuoteFontFace" Value="CamingoCodeItalic" />
         <Setter Property="TextFontFace" Value="OpenSans" />
-        <Setter Property="TextFontSize" Value="15" />
+        <!-- <Setter Property="TextFontSize" Value="15" /> -->
+        <Setter Property="TextFontSize" Value="17" />
         <Setter Property="TextColor" Value="{StaticResource Gray900}" />
         <Setter Property="TableHeaderBackgroundColor" Value="{StaticResource Gray100}" />
         <Setter Property="TableHeaderFontFace" Value="OpenSans" />

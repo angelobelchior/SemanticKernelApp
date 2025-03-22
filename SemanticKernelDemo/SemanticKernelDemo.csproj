@@ -73,6 +73,11 @@
         <PackageReference Include="Microsoft.SemanticKernel" Version="1.22.0" />
         <PackageReference Include="Microsoft.SemanticKernel.Connectors.Ollama" Version="1.42.0-alpha" />
         <PackageReference Include="Microsoft.SemanticKernel.Connectors.OpenAI" Version="1.22.0" />
+
+        <PackageReference Include="ChromaDB.Client" Version="1.0.0" />
+        <PackageReference Include="Microsoft.Extensions.AI.Ollama" Version="9.3.0-preview.1.25161.3" />
+        <PackageReference Include="Microsoft.Extensions.VectorData.Abstractions" Version="9.0.0-preview.1.25161.1" />
+        <PackageReference Include="Microsoft.SemanticKernel.Connectors.InMemory" Version="1.42.0-preview" />
     </ItemGroup>
 
 </Project>

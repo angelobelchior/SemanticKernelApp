@@ -29,6 +29,7 @@ public class AgentService
 
         _kernel.ImportPluginFromType<VendasDoDiaPlugin>();
         _kernel.ImportPluginFromType<MetaDeVendasDoDiaPlugin>();
+        _kernel.ImportPluginFromType<SolicitacaoDeReembolsoPlugin>();
     }
     
     public async Task InitializeUserMessageAsync(User user)
