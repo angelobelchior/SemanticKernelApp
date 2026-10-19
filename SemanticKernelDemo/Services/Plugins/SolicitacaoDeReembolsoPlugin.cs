@@ -12,10 +12,10 @@ public class SolicitacaoDeReembolsoPlugin
     [return: Description("Lista de instruções")]
     public async Task<IEnumerable<Instrucoes>> SolicitacaoDeReembolso()
     {
-        var configOptions = new ChromaConfigurationOptions(uri: "http://localhost:8000/api/v1/");
+        var configOptions = new ChromaConfigurationOptions(uri: "http://localhost:8000/api/v2/");
         using var httpClient = new HttpClient();
         var chromaClient = new ChromaClient(configOptions, httpClient);
-        var collection = await chromaClient.GetOrCreateCollection("reembolsos");
+        var collection = await chromaClient.GetOrCreateCollectionAsync("reembolsos");
         var collectionClient = new ChromaCollectionClient(collection, configOptions, httpClient);
 
         IEmbeddingGenerator<string, Embedding<float>> generator =
@@ -23,7 +23,7 @@ public class SolicitacaoDeReembolsoPlugin
 
         var input = "Solicitar Reembolso";
         var queryEmbedding = await generator.GenerateEmbeddingVectorAsync(input);
-        var queryResult = await collectionClient.Query(
+        var queryResult = await collectionClient.QueryAsync(
             queryEmbeddings: queryEmbedding,
             nResults: 20,
             include: ChromaQueryInclude.Metadatas | ChromaQueryInclude.Documents | ChromaQueryInclude.Distances);
